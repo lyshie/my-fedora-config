@@ -1,0 +1,29 @@
+[user]
+	name = SHIE, Li-Yi
+	email = lyshie@mail.nsysu.edu.tw
+[push]
+	default = matching
+[credential]
+	helper = cache --timeout=3600
+[color]
+	diff = auto
+	status = auto
+	branch = auto
+[core]
+	editor = vim
+	quotepath = false
+[diff "odf"]
+	textconv = odt2txt
+[diff "ods"]
+	textconv = /usr/local/bin/ods-indexer.sh
+[alias]
+	stat = status
+	st = status
+	co = checkout
+	br = branch
+	dc = diff --cached
+	df = diff
+	cm = commit
+[i18n]
+	commitEncoding = utf8
+	logoutputencoding = utf8

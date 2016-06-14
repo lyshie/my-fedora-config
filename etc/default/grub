@@ -1,0 +1,29 @@
+#GRUB_CMDLINE_LINUX='acpi_osi="!Windows 2006"'
+#GRUB_CMDLINE_LINUX="quiet rhgb vga=792 video=vesafb:ywrap,mtrr:3 rdblacklist=nouveau nouveau.modeset=0 LANG=zh_TW.UTF-8 KEYTABLE=us usbcore.autosuspend=-1 acpi_backlight=vendor video.brightness_switch_enabled=1 video.use_bios_initial_backlight=0 acpi=force ${GRUB_CMDLINE_LINUX}"
+#GRUB_CMDLINE_LINUX="quiet rhgb vga=792 video=vesafb:ywrap,mtrr:3 rdblacklist=nouveau nouveau.modeset=0 LANG=zh_TW.UTF-8 KEYTABLE=us usbcore.autosuspend=-1 acpi_backlight=vendor video.brightness_switch_enabled=1 video.use_bios_initial_backlight=0 nomodeset pcie_aspm=force acpi=force ${GRUB_CMDLINE_LINUX}"
+#GRUB_CMDLINE_LINUX="quiet rhgb video=vesafb:ywrap,mtrr:3 rdblacklist=nouveau nouveau.modeset=0 LANG=zh_TW.UTF-8 KEYTABLE=us usbcore.autosuspend=-1 acpi_backlight=vendor video.brightness_switch_enabled=1 video.use_bios_initial_backlight=0 pcie_aspm=force acpi=force highres=off nohz=off selinux=0 ${GRUB_CMDLINE_LINUX}"
+#I915_POWERSAVE="i915.i915_enable_rc6=1 i915.i915_enable_fbc=1 i915.lvds_downclock=1"
+DRACUT_CONF="rd_NO_LUKS rd_NO_MD rd_NO_MDIMSM rd_NO_DM rd.lvm.vg=vg_intel rd.lvm.lv=vg_intel/lv_root plymouth.enable=0"
+#I915_POWERSAVE="i915.i915_enable_rc6=7 i915.i915_enable_fbc=1 usbcore.autosuspend=1 threadirqs intel_iommu=on"
+#I915_POWERSAVE="i915.i915_enable_rc6=1 i915.i915_enable_fbc=1 usbcore.autosuspend=1 threadirqs"
+I915_POWERSAVE="usbcore.autosuspend=1 rfkill.default_state=0"
+GRUB_CMDLINE_LINUX="quiet pcie_aspm=force acpi=force selinux=0 i915.modeset=1 ${I915_POWERSAVE} ${DRACUT_CONF} rootfstype=ext4 elevator=noop logo.nologo libahci.ignore_sss=1 raid=noautodetect disable_ipv6=1 zswap.enabled=1 zswap.zpool=zsmalloc rootflags=journal_checksum"
+#GRUB_CMDLINE_LINUX="quiet pcie_aspm=force acpi=force selinux=0 i915.modeset=1 ${I915_POWERSAVE} ${DRACUT_CONF} rootfstype=ext4 elevator=noop disable_ipv6=1 logo.nologo libahci.ignore_sss=1 raid=noautodetect"
+#GRUB_CMDLINE_LINUX="quiet rhgb video=vesafb:ywrap,mtrr:3 rdblacklist=nouveau nouveau.modeset=0 LANG=zh_TW.UTF-8 KEYTABLE=us usbcore.autosuspend=-1 acpi_backlight=vendor video.brightness_switch_enabled=1 video.use_bios_initial_backlight=0 nomodeset pcie_aspm=force acpi=force highres=off nohz=off amd_iommu=off iommu=off intel_iommu=off selinux=0 ${GRUB_CMDLINE_LINUX}"
+#GRUB_CMDLINE_LINUX="quiet rhgb vga=792 video=vesafb:ywrap,mtrr:3 rdblacklist=nouveau nouveau.modeset=0 LANG=zh_TW.UTF-8 KEYTABLE=us usbcore.autosuspend=-1 nomodeset"
+GRUB_DISABLE_OS_PROBER=true
+GRUB_DISABLE_RECOVERY=true
+GRUB_DEFAULT=saved
+GRUB_SAVEDEFAULT=true
+GRUB_VIDEO_BACKEND="vbe"
+GRUB_TERMINAL_OUTPUT="gfxterm"
+GRUB_GFXMODE="1280x800x32"
+GRUB_GFXPAYLOAD_LINUX=keep
+#GRUB_BACKGROUND=/usr/share/backgrounds/verne/default/normalish/verne.png
+#GRUB_BACKGROUND=/boot/grub2-splash/thinkpad_b.jpg
+GRUB_DISTRIBUTOR="$(sed 's, release .*$,,g' /etc/system-release)"
+GRUB_TIMEOUT=1
+GRUB_HIDDEN_TIMEOUT=0
+GRUB_HIDDEN_TIMEOUT_QUIET=true
+GRUB_FONT="/boot/grub2/unicode.pf2"
+GRUB_THEME="/boot/grub2/themes/lenovo/theme.txt"

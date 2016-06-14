@@ -1,0 +1,7 @@
+rd.luks=0
+rd.md=0
+rd.dm=0
+rootfstype=ext4
+plymouth.enable=0
+rd.lvm.vg=vg_intel_
+rd.lvm.lv=vg_intel/lv_root

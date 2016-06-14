@@ -1,0 +1,11 @@
+#gtk-theme-name = "Nodoka"
+#gtk-icon-theme-name = "Fedora"
+
+style "user-font"
+{
+        font_name = "AR PL UMing TW 9"
+}
+widget_class "*" style "user-font"
+gtk-font-name = "AR PL UMing TW 9"
+gtk-menu-popup-delay = 0
+#gtk-cursor-theme-name = "Oxygen_Blue"
