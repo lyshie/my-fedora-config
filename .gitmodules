@@ -1,0 +1,3 @@
+[submodule "usr/local/share/fonts/consolas-powerline-vim"]
+	path = usr/local/share/fonts/consolas-powerline-vim
+	url = https://github.com/eugeii/consolas-powerline-vim
