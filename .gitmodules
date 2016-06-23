@@ -1,3 +1,12 @@
 [submodule "usr/local/share/fonts/consolas-powerline-vim"]
 	path = usr/local/share/fonts/consolas-powerline-vim
 	url = https://github.com/eugeii/consolas-powerline-vim
+[submodule "opt/local/src/vcs/tmux-powerline"]
+	path = opt/local/src/vcs/tmux-powerline
+	url = https://github.com/erikw/tmux-powerline.git
+[submodule "opt/local/src/vcs/tmux-zoom-window"]
+	path = opt/local/src/vcs/tmux-zoom-window
+	url = https://github.com/rhysd/tmux-zoom-window.git
+[submodule "opt/local/src/vcs/tmux-colors-solarized"]
+	path = opt/local/src/vcs/tmux-colors-solarized
+	url = https://github.com/seebi/tmux-colors-solarized.git
