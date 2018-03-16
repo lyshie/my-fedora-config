@@ -19,7 +19,8 @@
                 return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
             });
         }
-        // statically created
+
+        // auto upper case first letter
         $('input:text').on('change', function() {
             var line = toTitleCase($(this).val());
             $(this).val(line);
