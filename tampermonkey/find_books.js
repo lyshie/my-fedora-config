@@ -28,7 +28,7 @@
 
         // ISBN 欄位
         $('input#isbn').on('change', function() {
-            $('input#name_book, input#auth_content').attr('placeholder', '查詢中...');
+            $('input#name_book, input#auth_content, input#publisher').attr('placeholder', '查詢中...');
 
             var isbn = $(this).val();
             $.getJSON('//www.chps.tn.edu.tw/python/isbn.py?callback=?&isbn=' + isbn, function(json) {
@@ -36,6 +36,8 @@
                     console.log(json);
                     $('input#name_book').val(json.Title);
                     $('input#auth_content').val(json.Authors);
+                    $('input#publisher').val(json.Publisher);
+
                     if (json.Language == 'eng') {
                         $('select#lang').val('eng');
                     }
