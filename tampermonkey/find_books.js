@@ -3,33 +3,30 @@
 // @namespace    http://tampermonkey.net/
 // @version      0.1
 // @description  Find books
-// @author       Hsieh Li-Yi
+// @author       HSIEH, Li-Yi <lyshie@tn.edu.tw>
 // @match        *://read.moe.edu.tw/*
 // @grant        none
 // @require      http://code.jquery.com/jquery-latest.js
 // ==/UserScript==
 
-(function ($, undefined) {
-    $(function () {
+(function($, undefined) {
+    $(function() {
         'use strict';
 
-        function toTitleCase(str)
-        {
+        // 第一個字母大寫
+        function toTitleCase(str) {
             return str.replace(/(?:^|\w)\S*/g, function(txt) {
                 return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
             });
         }
 
-        $('input#name_book').on('change', function() {
+        // 書名 與 作者
+        $('input#name_book, input#auth_content').on('change', function() {
             var line = toTitleCase($(this).val());
             $(this).val(line);
         });
 
-        $('input#auth_content').on('change', function() {
-            var line = toTitleCase($(this).val());
-            $(this).val(line);
-        });
-
+        // ISBN 欄位
         $('input#isbn').on('change', function() {
             var isbn = $(this).val();
             $.getJSON('//www.chps.tn.edu.tw/python/isbn.py?callback=?&isbn=' + isbn, function(json) {
@@ -43,7 +40,8 @@
                 }
             });
         });
-        
+
+        // 預設為 ISBN 欄位
         $('input#isbn').focus();
     });
 })(window.jQuery.noConflict(true));
