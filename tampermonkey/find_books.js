@@ -32,7 +32,7 @@
 
         $('input#isbn').on('change', function() {
             var isbn = $(this).val();
-            $.getJSON('http://www.chps.tn.edu.tw/python/isbn.py?callback=?&isbn=' + isbn, function(json) {
+            $.getJSON('//www.chps.tn.edu.tw/python/isbn.py?callback=?&isbn=' + isbn, function(json) {
                 if (json) {
                     console.log(json);
                     $('input#name_book').val(json.Title);
