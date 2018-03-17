@@ -43,5 +43,7 @@
                 }
             });
         });
+        
+        $('input#isbn').focus();
     });
 })(window.jQuery.noConflict(true));
