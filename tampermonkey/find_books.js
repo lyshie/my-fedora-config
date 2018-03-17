@@ -28,6 +28,8 @@
 
         // ISBN 欄位
         $('input#isbn').on('change', function() {
+            $('input#name_book, input#auth_content').attr('placeholder', '查詢中...');
+
             var isbn = $(this).val();
             $.getJSON('//www.chps.tn.edu.tw/python/isbn.py?callback=?&isbn=' + isbn, function(json) {
                 if (json) {
