@@ -1,0 +1,26 @@
+div.all_cards {
+    margin: 0px !important;
+}
+
+div.signin_card {
+    margin: 0px !important;
+    padding: 1px !important;
+}
+
+div.signin_card dl:nth-child(1) {
+    display: none;
+}
+
+div.signin_card dt {
+    display: none;
+}
+
+div.signin_card dl:nth-child(3) dd.ng-binding {
+    font-size: 5em;
+    float: left;
+}
+
+dd>img {
+    height: 150px;
+    float: right;
+}
