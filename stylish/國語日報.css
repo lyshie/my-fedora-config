@@ -1,0 +1,9 @@
+#pageContainer {
+    margin: 40px !important;
+    width: 85% !important;
+    height: 100% !important;
+}
+
+.pageContainer * {
+    font-size: 18px !important;
+}
