@@ -1,0 +1,32 @@
+span {
+    font-size: 14px;
+    font-weight: bold !important;
+    text-shadow: 0.03em 0.03em 0.03em #999999 !important;
+}
+
+div.scratchCategoryMenuItemLabel {
+    font-size: 14px !important;
+    font-weight: bold !important;
+    text-shadow: 0.03em 0.03em 0.03em #999999 !important;
+}
+
+.blocklyText {
+    font-size: 20px !important;
+    font-weight: bold !important;
+    text-shadow: 0.03em 0.03em 0.03em #999999 !important;
+}
+
+div[class^="sprite-selector-item"],
+span[class^="label_input-label"],
+span[class^="labeled-icon-button"],
+input[class^="input_input-form"] {
+    font-size: 12px !important;
+    font-weight: bold !important;
+    text-shadow: 0.03em 0.03em 0.03em #999999 !important;
+}
+
+.scratchCommentText {
+    font-size: 20px !important;
+    font-weight: bold !important;
+    text-shadow: 0.03em 0.03em 0.03em #999999 !important;
+}
