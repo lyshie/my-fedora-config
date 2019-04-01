@@ -1,3 +1,8 @@
+/*
+    1. Install Stylus (https://chrome.google.com/webstore/detail/stylus/clngdbkpkpeebahjckkjfobafhncgmne)
+    2. URL: Regular expression (https://scratch.mit.edu/projects/.*editor.*)
+*/
+
 span {
     font-size: 14px;
     font-weight: bold !important;
