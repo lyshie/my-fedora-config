@@ -26,5 +26,19 @@
                 $('#nextPageArrow')[0].click();
             }
         });
+
+        $('#pageContainer').css({
+            'margin' : '40px',
+            'width' : '85%',
+            'height' : '100%'
+        });
+
+        $('.pageContainer *').css({
+            'font-size' : '18px'
+        });
+
+        $('img[alt="Page Background"]').click(function(e) {
+            window.open($(this).attr('src'));
+        });
     });
 })(window.jQuery.noConflict(true));
